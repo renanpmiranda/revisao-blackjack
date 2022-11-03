@@ -18,26 +18,20 @@ if (isIniciarRodada) {
    // 2) comparar valores
    // 3) imprimir o vencedor ou empate
 
-   console.log("Boas vindas ao jogo!")
+   console.log("Boas vindas ao jogo de Blackjack!")
 
-   const cartaJogador1 = comprarCarta()
-   console.log(cartaJogador1.texto)
-   const cartaJogador2 = comprarCarta()
-   console.log(cartaJogador2.texto)
-
+   const cartaJogador1 = comprarCarta()   
+   const cartaJogador2 = comprarCarta() 
    const totalJogador = cartaJogador1.valor + cartaJogador2.valor
-   console.log(`Total do jogador: ${totalJogador}`)
+   console.log(`Usuário - cartas:${cartaJogador1.texto} ${cartaJogador2.texto} - pontuação ${totalJogador}`)
 
-   const cartaComputador1 = comprarCarta()
-   console.log(cartaComputador1.texto)
+   const cartaComputador1 = comprarCarta()   
    const cartaComputador2 = comprarCarta()
-   console.log(cartaComputador2.texto)
-
    const totalComputador = cartaComputador1.valor + cartaComputador2.valor
-   console.log(`Total do computador: ${totalComputador}`)
+   console.log(`Computador - cartas: ${cartaComputador1.texto} ${cartaComputador2.texto} - pontuação ${totalComputador}`)
    
    if(totalJogador > totalComputador){
-      console.log("O jogador venceu!")
+      console.log("O usuário venceu!")
    }else if(totalJogador < totalComputador){
       console.log("O computador venceu!")
    }else{
